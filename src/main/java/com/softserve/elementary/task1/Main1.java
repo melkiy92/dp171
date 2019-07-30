@@ -13,7 +13,7 @@ public class Main1 {
     public static void main(String[] args) {
 
         mainArguments = args;
-        int[] parameters = {};
+        int[] parameters = new int[2];
 
         if (mainArguments.length != 0) {
             parameters = Converter.convertToInt(mainArguments);

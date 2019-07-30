@@ -14,14 +14,14 @@ public class Dialog2 {
         System.out.println("Please enter sides of two envelopes: (a,b) and (c,d).");
         for (int i = 0; i < 4; i++) {
             do {
-                System.out.println("Enter the length of " + sides[i] + ":");
+                System.out.println("Enter the length of " + sides[i] + ": ");
                 while (!scanner.hasNextDouble()) {
-                    System.out.println("That is not a number. Please enter again.");
+                    System.err.println("That is not a number. Please enter again.");
                     scanner.next();
                 }
                 number = scanner.nextDouble();
                 if (number <= 0) {
-                    System.out.println("The number should be positive. Please enter again.");
+                    System.err.println("The number should be positive. Please enter again.");
                 }
             } while (number <= 0);
             sizes[i] = number;

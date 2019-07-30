@@ -2,17 +2,17 @@ package com.softserve.elementary.task3;
 
 public class Triangle {
 
+    private String name;
     private double sideA;
     private double sideB;
     private double sideC;
-    private String name;
     private double area;
 
-    public Triangle(double sideA, double sideB, double sideC, String name) {
+    public Triangle(String name, double sideA, double sideB, double sideC) {
+        this.name = name;
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-        this.name = name;
     }
 
     public double getSideA() {
