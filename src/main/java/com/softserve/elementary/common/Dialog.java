@@ -1,11 +1,11 @@
-package com.softserve.elementary.common.userInteraction;
+package com.softserve.elementary.common;
+
+import com.softserve.elementary.common.MyScanner;
 
 import java.util.Scanner;
 
 public class Dialog {
-    //private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    //System.out.print("Enter email: ");
-//String email = reader.readLine();
+
     private static Scanner scanner = MyScanner.getInstance();
 
     public static void chooseTask() {
@@ -23,7 +23,7 @@ public class Dialog {
 
     public static boolean askToRepeat() {
         System.out.print("Do you want to repeat? Enter \"y\" or \"yes\" to continue: ");
-        String answer = scanner.next().trim();
+        String answer = scanner.nextLine().trim();
         return answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes");
     }
 

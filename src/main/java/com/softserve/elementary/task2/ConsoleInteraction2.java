@@ -1,10 +1,10 @@
 package com.softserve.elementary.task2;
 
-import com.softserve.elementary.common.userInteraction.MyScanner;
+import com.softserve.elementary.common.MyScanner;
 
 import java.util.Scanner;
 
-public class Dialog2 {
+public class ConsoleInteraction2 {
     private static Scanner scanner = MyScanner.getInstance();
 
     public static double[] getEnvelopeSizes() {

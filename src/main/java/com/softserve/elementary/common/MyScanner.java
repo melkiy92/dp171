@@ -1,4 +1,4 @@
-package com.softserve.elementary.common.userInteraction;
+package com.softserve.elementary.common;
 
 import java.util.Scanner;
 

@@ -1,5 +1,7 @@
 package com.softserve.elementary.task3;
 
+import java.text.DecimalFormat;
+
 public class Triangle {
 
     private String name;
@@ -9,6 +11,7 @@ public class Triangle {
     private double area;
 
     public Triangle(String name, double sideA, double sideB, double sideC) {
+     //   if(name.isEmpty() || name == null ) {     }
         this.name = name;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -55,10 +58,28 @@ public class Triangle {
         this.area = area;
     }
 
+    public double calculateArea(Triangle triangle) {
 
+        double sideA = triangle.getSideA();
+        double sideB = triangle.getSideB();
+        double sideC = triangle.getSideC();
+        double halfPerimeter = calculateHalfPerimeter(sideA, sideB, sideC);
+        double areaOfTriangle = Math.sqrt(halfPerimeter
+                * (halfPerimeter - sideA)
+                * (halfPerimeter - sideB)
+                * (halfPerimeter - sideC));
+        triangle.setArea(areaOfTriangle);
+        return areaOfTriangle;
+    }
+
+    private double calculateHalfPerimeter(double sideA, double sideB, double sideC) {
+
+        return (sideA + sideB + sideC) / 2;
+
+    }
     @Override
     public String toString() {
-        return "[" + name + "]: " + area + "cm";
+        return "[Triangel " + name + "]: " + new DecimalFormat("#0.00").format(area) + " cm";
     }
 
 }

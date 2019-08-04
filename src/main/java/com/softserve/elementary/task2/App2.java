@@ -1,19 +1,19 @@
 package com.softserve.elementary.task2;
 
-import com.softserve.elementary.common.userInteraction.Dialog;
-import com.softserve.elementary.common.userInteraction.MyScanner;
+import com.softserve.elementary.common.Dialog;
+import com.softserve.elementary.common.MyScanner;
 
-public class Main2 {
+public class App2 {
     public static void main(String[] args) {
         double[] parameters;
         boolean repeat = true;
         do {
-            parameters = Dialog2.getEnvelopeSizes();
+            parameters = ConsoleInteraction2.getEnvelopeSizes();
             Envelope envelope1 = new Envelope(parameters[0], parameters[1]);
             Envelope envelope2 = new Envelope(parameters[2], parameters[3]);
             EnvelopeComparator envComparator = new EnvelopeComparator();
             int result = envComparator.compare(envelope1, envelope2);
-            Dialog2.printResult(result);
+            ConsoleInteraction2.printResult(result);
 
             if (!Dialog.askToRepeat()) {
                 Dialog.sayBye();
@@ -21,7 +21,7 @@ public class Main2 {
                 repeat = false;
             }
         } while (repeat);
-
+        //MyScanner.getInstance().close();
 
     }
 }

@@ -1,12 +1,10 @@
 package com.softserve.elementary.task1;
 
-import com.softserve.elementary.common.*;
-import com.softserve.elementary.common.userInteraction.Dialog;
-import com.softserve.elementary.common.userInteraction.MyScanner;
+import com.softserve.elementary.common.Dialog;
 
 import java.util.Arrays;
 
-public class Main1 {
+public class App1 {
 
     public static String[] mainArguments;
 
@@ -22,7 +20,7 @@ public class Main1 {
         boolean repeat;
         do {
             if (parameters[0] <= 0 || parameters[1] <= 0) {
-                parameters = Dialog1.getSizesFromConsole();
+                parameters = ConsoleInteraction1.getSizesFromConsole();
             }
             ChessBoard board = new ChessBoard(parameters[0], parameters[1]);
             ChessBoardService chessBoardService = new ChessBoardService();
@@ -33,10 +31,9 @@ public class Main1 {
                 repeat = true;
             } else {
                 Dialog.sayBye();
-                MyScanner.getInstance().close();
                 repeat = false;
             }
         } while (repeat);
-
+        //MyScanner.getInstance().close();
     }
 }

@@ -1,4 +1,4 @@
-package com.softserve.elementary.common;
+package com.softserve.elementary.task1;
 
 public class Converter {
 

@@ -1,10 +1,10 @@
 package com.softserve.elementary.task1;
 
-import com.softserve.elementary.common.userInteraction.MyScanner;
+import com.softserve.elementary.common.MyScanner;
 
 import java.util.Scanner;
 
-public class Dialog1 {
+public class ConsoleInteraction1 {
 
     private static Scanner scanner = MyScanner.getInstance();
 
